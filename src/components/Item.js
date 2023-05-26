@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
 
 const Item = ({ producto }) => {
-  const { title, precio } = producto;
+  const { title, precio, imagen } = producto;
   return (
-    <div className="card col-12 col-sm-4 text-center d-flex ">
-      <div className="card-body ">
-        <h5 className="card-title">{title}</h5>
+    <div className=" row col-sm-4  p-3">
+      <div className="card text-center">
+        <div className="card-body" variant="light">
+          <h5 className="card-title">{title}</h5>
 
-        <p className="card-text">
-          $ <span>{precio}</span>
-        </p>
-        <button className="btn btn-warning">Comprar</button>
-        <Link to={`/item/${producto.id}`}>
-          <button className="btn btn-warning">Detalle</button>
-        </Link>
+          <img src={imagen} alt="Mimagen" width="100px" />
+          <p className="card-text">
+            $ <span>{precio}</span>
+          </p>
+          <Link to={`/item/${producto.id}`}>
+            <button className="btn btn-warning">Comprar</button>
+          </Link>
+          <Link to={`/item/${producto.id}`}>
+            <button className="btn btn-warning">Detalle</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Item;
-
-// muestra individualmente un solo producto (una sola card)  recibe un props con la info del producto que debe mostrar

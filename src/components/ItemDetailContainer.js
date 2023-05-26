@@ -1,26 +1,21 @@
 import ItemDetail from "./ItemDetail";
-import productos from "../producto";
+// import productos from "../producto";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { getProductobyId } from "../utils";
 
 const ItemDetailContainer = () => {
   const [productoDetail, setProductoDetail] = useState({});
   const { id } = useParams();
 
+  // aca adentro voy hacer una consulta a la base de datos , entonces necesito la variable "db"
   useEffect(() => {
-    const pedido = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(productos);
-      }, 2000);
+    const res = getProductobyId();
+    res.then((resultado) => {
+      setProductoDetail(resultado);
     });
-    pedido
-      .then((resultado) => {
-        setProductoDetail(resultado.find((perro) => perro.id === parseInt(id)));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
   }, [id]);
+
   return (
     <>
       <ItemDetail producto={productoDetail} />
@@ -29,4 +24,28 @@ const ItemDetailContainer = () => {
 };
 export default ItemDetailContainer;
 
-//se muestra la ruta "/item/:id"  Tiene adentro a un ItemDetail
+// import ItemDetail from "./ItemDetail";
+// // import productos from "../producto";
+// import { useState, useEffect } from "react";
+// import { useParams } from "react-router-dom";
+
+// import { getFirestore, doc, getDoc } from "firebase/firestore";
+
+// const ItemDetailContainer = () => {
+//   const [productoDetail, setProductoDetail] = useState({});
+//   const { id } = useParams();
+
+//   useEffect(() => {
+//     const queryDb = getFirestore();
+//     const queryDoc = doc(queryDb, "productos", "id");
+//     getDoc(queryDoc).then((res) =>
+//       setProductoDetail({ id: res.id, ...res.productoDetail() })
+//     );
+//   }, [id]);
+//   return (
+//     <>
+//       <ItemDetail producto={productoDetail} />
+//     </>
+//   );
+// };
+// export default ItemDetailContainer;

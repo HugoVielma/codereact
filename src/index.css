@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: rgb(78, 132, 39);
+  background: linear-gradient(
+    90deg,
+    rgba(78, 132, 39, 1) 38%,
+    rgba(51, 131, 37, 1) 59%,
+    rgba(9, 121, 104, 1) 79%
+  );
 }
 
 code {
@@ -20,4 +28,14 @@ code {
   text-align: center;
   color: green;
   border-radius: 100px;
+}
+
+.enlace {
+  padding-left: 2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  color: red;
 }

@@ -1,32 +1,36 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import productos from "../producto";
+// import productos from "../producto";
 import { useParams } from "react-router";
+import { getProductos, getProductosCategoria } from "../utils";
 
 const ItemListContainer = (props) => {
   const { greeting } = props;
   const [producto, setProducto] = useState([]);
-  const { id } = useParams();
+  const { category } = useParams();
 
   useEffect(() => {
-    const pedido = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(productos);
-      }, 2000);
-    });
-    if (id) {
-      pedido.then((resultado) =>
-        setProducto(resultado.filter((perro) => perro.category === id))
-      );
+    if (category === undefined) {
+      const res = getProductos();
+      res.then((resultado) => {
+        setProducto(resultado);
+      });
     } else {
-      pedido.then((resultado) => setProducto(resultado));
+      const res = getProductosCategoria(category);
+      res.then((resultado) => {
+        setProducto(resultado);
+      });
     }
-    pedido.catch((error) => console.log(error));
-  }, [id]);
+  }, [category]);
   return (
     <main>
-      <h1 style={{ fontSize: "54px", fontWeight: "bold" }}>{greeting}</h1>
-      <p id="coloreando">mi primer P</p>
+      <h1
+        className="titulo text-center"
+        style={{ fontSize: "54px", fontWeight: "bold" }}
+      >
+        {greeting}
+      </h1>
+
       <ItemList producto={producto} />
     </main>
   );
