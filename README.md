@@ -1,3 +1,5 @@
+![Imagen editable Family Pets](/imagenes/editable_Family_Pets2.png)
+
 # Nombre del Proyecto
 
 familyPets se hizo con la finalidad de presentar como proyecto final del curso de react.js, se creo un carrito de compra de productos para mascotas.
@@ -32,9 +34,9 @@ Enlace a la documentación del proyecto.
 
 ## Licencia
 
-Especificar los
+Se permite a los usuarios utilizar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar.
 
-### Features
+### Caracteristicas
 
 -Gestión de productos: Permite a los usuarios agregar y eliminar productos.
 -Carrito de compras: Permite a los usuarios agregar productos a un carrito de compras y realizar compras.
