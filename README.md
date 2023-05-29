@@ -2,21 +2,21 @@
   <img src="public/imagenes/editable_Family_Pets2.png" alt="Family Pets" width="400">
 </p>
 
-## Nombre del Proyecto
-familyPets se hizo con la finalidad de presentar como proyecto final del curso de react.js, se creo un carrito de compra de productos para mascotas.
+# Family Pets
+
+**Proyecto Final del Curso de React.js**
+
+FamilyPets es un proyecto final del curso de React.js que consiste en un carrito de compra de productos para mascotas.
 
 ## Requerimientos
 
-Lista de requerimientos previos necesarios para ejecutar el proyecto:
+Antes de ejecutar el proyecto, asegúrate de tener los siguientes requisitos previos:
 
-- Instalación de reactjs [Aqui](http://https://react.dev/learn/add-react-to-an-existing-project "Aqui")
-- Librerías/Framework
-- Recursos/Herramientas
-
+- Instalación de ReactJS. Puedes encontrar instrucciones de instalación [aquí](https://reactjs.org/).
 
 ## Instalación
 
-Sigue los siguientes pasos para instalar y configurar el proyecto:
+Sigue estos pasos para instalar y configurar el proyecto:
 
 1. Clona este repositorio: `git clone https://github.com/HugoVielma/codereact.git`
 2. Navega al directorio del proyecto: `cd codereact`
@@ -24,19 +24,19 @@ Sigue los siguientes pasos para instalar y configurar el proyecto:
 
 ## Uso
 
-Pasos detallados para usar el proyecto:
+Sigue estos pasos para utilizar el proyecto:
 
-1. Ejecutar el programa
-2. Introducir los parámetros necesarios
-3. Disfrutar de los resultados
+1. Ejecuta el programa.
+2. Introduce los parámetros necesarios.
+3. Disfruta de los resultados.
 
 ## Documentación
 
-Enlace a la documentación del proyecto.
+La documentación completa del proyecto se encuentra disponible [aquí](https://example.com).
 
 ## Licencia
 
-Se permite a los usuarios utilizar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar.
+Este proyecto está bajo la Licencia MIT. Puedes ver el archivo de licencia [aquí](LICENSE).
 
 ## Características
 
@@ -66,3 +66,4 @@ Las dependencias utilizadas en este proyecto son:
     "web-vitals": "^2.1.4"
   }
 }
+
