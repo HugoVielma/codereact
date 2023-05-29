@@ -39,7 +39,7 @@ Sigue los siguientes pasos para ejecutar y utilizar el proyecto:
 
 ## Documentación
 
-La documentación completa del proyecto se encuentra disponible [aquí](https://example.com).
+La documentación completa del proyecto se encuentra disponible unas horas será agregada su ruta [aquí](https://example.com).Gracias 
 
 ## Licencia
 
