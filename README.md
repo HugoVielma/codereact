@@ -24,11 +24,18 @@ Sigue estos pasos para instalar y configurar el proyecto:
 
 ## Uso
 
-Sigue estos pasos para utilizar el proyecto:
+Sigue los siguientes pasos para ejecutar y utilizar el proyecto:
 
-1. Ejecuta el programa.
-2. Introduce los parámetros necesarios.
-3. Disfruta de los resultados.
+1. Clona este repositorio: `git clone https://github.com/HugoVielma/codereact.git`
+2. Navega al directorio del proyecto: `cd codereact`
+3. Instala las dependencias: `npm install`
+4. Inicia la aplicación: `npm start`
+5. Abre tu navegador y visita: `http://localhost:3000`
+6. Interactúa con la aplicación para agregar productos al carrito y realizar compras.
+7. Disfruta de la experiencia de compra de productos para mascotas en Family Pets.
+
+¡Diviértete explorando la aplicación y descubriendo todos los productos disponibles para tus mascotas!
+
 
 ## Documentación
 
