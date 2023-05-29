@@ -1,51 +1,26 @@
-import ItemDetail from "./ItemDetail";
-// import productos from "../producto";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getProductobyId } from "../utils";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
   const [productoDetail, setProductoDetail] = useState({});
   const { id } = useParams();
 
-  // aca adentro voy hacer una consulta a la base de datos , entonces necesito la variable "db"
   useEffect(() => {
-    const res = getProductobyId();
-    res.then((resultado) => {
-      setProductoDetail(resultado);
-    });
+    const fetchData = async () => {
+      try {
+        const resultado = await getProductobyId(id);
+        setProductoDetail(resultado);
+      } catch (error) {
+        console.log("Hubo un error al obtener el producto:", error);
+      }
+    };
+
+    fetchData();
   }, [id]);
 
-  return (
-    <>
-      <ItemDetail producto={productoDetail} />
-    </>
-  );
+  return <ItemDetail {...productoDetail} />;
 };
+
 export default ItemDetailContainer;
-
-// import ItemDetail from "./ItemDetail";
-// // import productos from "../producto";
-// import { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-
-// import { getFirestore, doc, getDoc } from "firebase/firestore";
-
-// const ItemDetailContainer = () => {
-//   const [productoDetail, setProductoDetail] = useState({});
-//   const { id } = useParams();
-
-//   useEffect(() => {
-//     const queryDb = getFirestore();
-//     const queryDoc = doc(queryDb, "productos", "id");
-//     getDoc(queryDoc).then((res) =>
-//       setProductoDetail({ id: res.id, ...res.productoDetail() })
-//     );
-//   }, [id]);
-//   return (
-//     <>
-//       <ItemDetail producto={productoDetail} />
-//     </>
-//   );
-// };
-// export default ItemDetailContainer;

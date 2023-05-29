@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-// import productos from "../producto";
 import { useParams } from "react-router";
 import { getProductos, getProductosCategoria } from "../utils";
 

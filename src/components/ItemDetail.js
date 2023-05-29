@@ -3,16 +3,19 @@ import { Link } from "react-router-dom";
 import useCartContext from "./CartContext";
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ({ producto }) => {
-  const [aCart, setaCart] = useState(false);
+const ItemDetail = (props) => {
+  const { title, descripcion, precio, imagen } = props;
+
+  const [addedToCart, setAddedToCart] = useState(false);
   const { addToCart } = useCartContext();
-  const onAdd = (count) => {
-    setaCart(true);
-    addToCart(producto, count);
+
+  const handleAddToCart = () => {
+    addToCart(props, 1);
+    setAddedToCart(true);
   };
-  const { title, descripcion, precio, imagen } = producto;
+
   return (
-    <div className="card  col-sm-4 text-center d-flex ">
+    <div className="card col-sm-4 text-center d-flex">
       <div className="card-body">
         <img src={imagen} alt="Mimagen" width="100" />
         <h5 className="card-title">{title}</h5>
@@ -20,10 +23,13 @@ const ItemDetail = ({ producto }) => {
         <p className="card-text">
           $ <span>{precio}</span>
         </p>
-        {aCart ? (
-          <Link to="/cart">Ver Carrito</Link>
+        {!addedToCart ? (
+          <ItemCount onAdd={handleAddToCart} initial={1} stock={props.stock} />
         ) : (
-          <ItemCount onAdd={onAdd} initial={1} stock={producto.stock} />
+          <div>
+            <p>Producto agregado al carrito</p>
+            <Link to="/cart">Ver Carrito</Link>
+          </div>
         )}
       </div>
     </div>
