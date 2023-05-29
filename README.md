@@ -1,5 +1,8 @@
-# Nombre del Proyecto
+<p align="center">
+  <img src="public/imagenes/editable_Family_Pets2.png" alt="Family Pets" width="400">
+</p>
 
+## Nombre del Proyecto
 familyPets se hizo con la finalidad de presentar como proyecto final del curso de react.js, se creo un carrito de compra de productos para mascotas.
 
 ## Requerimientos
@@ -32,11 +35,12 @@ Enlace a la documentación del proyecto.
 
 ## Licencia
 
-Especificar los
+Se permite a los usuarios utilizar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar.
 
-### Features
+## Características
 
--Gestión de productos: Permite a los usuarios agregar y eliminar productos.
--Carrito de compras: Permite a los usuarios agregar productos a un carrito de compras y realizar compras.
--Enrutamiento: Utiliza el enrutamiento de React Router para navegar entre diferentes páginas o secciones de la aplicación.
-Notificaciones en tiempo real: Utiliza tecnología Firebase para la recopilación de datos en tiempo real a los usuarios.
+- Gestión de productos: Permite a los usuarios agregar y eliminar productos.
+- Carrito de compras: Permite a los usuarios agregar productos a un carrito de compras y realizar compras.
+- Enrutamiento: Utiliza el enrutamiento de React Router para navegar entre diferentes páginas o secciones de la aplicación.
+- Notificaciones en tiempo real: Utiliza tecnología Firebase para la recopilación de datos en tiempo real a los usuarios.
+
