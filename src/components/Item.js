@@ -1,20 +1,11 @@
-import useCartContext from "./CartContext";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 const Item = ({ producto }) => {
-  const { addToCart } = useCartContext();
   const { title, precio, imagen } = producto;
   const navigate = useNavigate();
-  const [isAddingToCart, setIsAddingToCart] = useState(false);
 
   const handleClick = () => {
     navigate(`/item/${producto.id}`);
-  };
-
-  const handleAddToCart = () => {
-    setIsAddingToCart(true);
-    addToCart(producto, 1);
   };
 
   return (
@@ -26,15 +17,6 @@ const Item = ({ producto }) => {
           <p className="card-text">
             $ <span>{precio}</span>
           </p>
-          {isAddingToCart ? (
-            <button className="btn btn-warning" disabled>
-              Agregando al carrito...
-            </button>
-          ) : (
-            <button onClick={handleAddToCart} className="btn btn-warning">
-              Comprar
-            </button>
-          )}
           <button onClick={handleClick} className="btn btn-warning">
             Detalle
           </button>
