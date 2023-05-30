@@ -12,7 +12,7 @@ FamilyPets es un proyecto final del curso de React.js que consiste en un carrito
 
 Antes de ejecutar el proyecto, asegúrate de tener los siguientes requisitos previos:
 
-- Instalación de ReactJS. Puedes encontrar instrucciones de instalación [aquí](https://reactjs.org/).
+- Instalación de ReactJS. Puedes encontrar instrucciones de instalación - Instalación de reactjs [Aqui](http://https://react.dev/learn/add-react-to-an-existing-project "Aqui").
 
 ## Instalación
 
