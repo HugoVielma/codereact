@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-![Imagen editable Family Pets](/imagenes/editable_Family_Pets2.png)
 
-# Nombre del Proyecto
-=======
+## Nombre del Proyecto
 <p align="center">
   <img src="public/imagenes/editable_Family_Pets2.png" alt="Family Pets" width="400">
 </p>
->>>>>>> 75663373a7ae9f8cde4fa4da9dbe685adfe90791
 
-# Family Pets
+## Family Pets
 
 **Proyecto Final del Curso de React.js**
 
