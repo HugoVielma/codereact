@@ -80,5 +80,5 @@ Las dependencias utilizadas en este proyecto son:
     "web-vitals": "^2.1.4"
   }
 }
->>>>>>> 75663373a7ae9f8cde4fa4da9dbe685adfe90791
+
 
