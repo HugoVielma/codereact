@@ -45,11 +45,10 @@ La documentación completa del proyecto se encuentra disponible unas horas será
 
 ## Licencia
 
-<<<<<<< HEAD
 Se permite a los usuarios utilizar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar.
 
 ### Caracteristicas
-=======
+
 Este proyecto está bajo la Licencia MIT. Puedes ver el archivo de licencia [aquí](LICENSE).
 
 ## Características
