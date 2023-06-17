@@ -23,7 +23,6 @@ export const getProductos = () => {
       return respuestaparseada;
     })
     .catch((error) => {
-      console.log("Hubo un error pidiendo los productos:", error);
       throw error;
     });
 };
@@ -46,7 +45,6 @@ export const getProductosCategoria = (category) => {
       return respuestaparseada;
     })
     .catch((error) => {
-      console.log("Hubo un error pidiendo los productos por categoría:", error);
       throw error;
     });
 };
@@ -57,7 +55,7 @@ export const getProductobyId = async (id) => {
 
   try {
     const consulta = await getDocs(filtrando);
-    console.log("consulta.docs: ", consulta.docs);
+
     const productos = consulta.docs.map((doc) => {
       const producto = {
         id: doc.id,
@@ -68,7 +66,6 @@ export const getProductobyId = async (id) => {
 
     return productos[0];
   } catch (error) {
-    console.log("Hubo un error pidiendo los productos:", error);
     throw error;
   }
 };

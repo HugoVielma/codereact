@@ -24,9 +24,7 @@ function ColorSchemesExample() {
             Gatos
           </NavLink>
         </Nav>
-        <NavLink className="nav-link" to="/cart">
-          <CartWidget />
-        </NavLink>
+        <CartWidget />
       </Container>
     </Navbar>
   );
